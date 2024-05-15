@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main  # Adjust this to the branch you want to trigger the action on
+      - main 
 
 jobs:
   build-and-push:
@@ -28,7 +28,3 @@ jobs:
         context: .
         push: true
         tags: maheshdockerhubnew/nodejs-app:latest
-        # tags: ${{ secrets.DOCKERHUB_USERNAME }}/your-repo-name:latest
-
-    # - name: Post the link to the Docker image
-    #   run: echo "Docker image pushed to DockerHub: https://hub.docker.com/r/${{ secrets.DOCKERHUB_USERNAME }}/maheshdockerhubnew/nodejs-app:latest"
